@@ -10,9 +10,17 @@ Also it assumes you are familar with NPM, and the card concept in the Composer
 
 ### *Step 1*
 
-Run the `startRedis.sh` script to get the docker image for redis started and running.
-The CLI for redis can be started with
+The `startRedis.sh` script contains the commands to get the docker image for redis started and running. In more detail
+```
+$ # get and start the redis server
+$ docker run -p 6379:6379 --name composer-wallet-redis -d redis
+$ # to restart it later....
+$ docker start composer-wallet-redis
+$ # to clearout redis contents, issue this command
+$ docker exec composer-wallet-redis redis-cli -c flushall
+```
 
+The CLI for redis can be started with
 ```
 docker run -it --link composer-wallet-redis:redis --rm redis redis-cli -h redis -p 6379
 ```
