@@ -2,8 +2,6 @@
 
 This is Hyperledger Composer Wallet implementation using [Redis](https://redis.io/) as a store.
 
-_ *NOTE* that this is based on the preview version of the 'Cloud Wallet' feature. The API that needs to be implemented should be expected to change_
-
 ## Usage
 
 The steps below assume that you have an application or playground, or rest server for Hyperledger Composer that wish to use.
