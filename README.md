@@ -46,7 +46,7 @@ Assuming that you do not have the config directory already - this is using the s
 ```
 {
   "composer": {
-    "cardstore": {
+    "wallet": {
       "type": "@ampretia/composer-wallet-redis",
       "desc": "Uses a local redis instance,
       "options": {
@@ -69,7 +69,7 @@ Any options specified in options, will be passed directly into the `redis.create
 As this is using the *config* module specifing the details on the command line via environment variables can be achieved by
 
 ```
-export NODE_CONFIG={"composer":{"cardstore":{"type":"@ampretia/composer-wallet-redis","desc":"Uses  a local redis instance,"options":{}}}}
+export NODE_CONFIG={"composer":{"wallet":{"type":"@ampretia/composer-wallet-redis","desc":"Uses  a local redis instance,"options":{}}}}
 ```
 
 The any application (or command line, eg `composer card list`) that is in this shell will use the cloud wallets. 
